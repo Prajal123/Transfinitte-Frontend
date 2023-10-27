@@ -1,0 +1,75 @@
+/* Reset the default margin and padding for the whole document */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Create a container that centers the login form */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 100vh;
+  }
+  
+  /* Style the left container */
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    width: 50%;
+  }
+  
+  /* Style the right container */
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  
+  /* Style the main login container */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    height: 250px;
+    width: 45%;
+    margin: 20px; /* Add margin for spacing between elements */
+  }
+  
+  /* Style the OTP field and Submit button container */
+  .otp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Adjust the margin between OTP field and Submit button */
+  .otp-container .submit-button {
+    margin-top: 10px; /* Adjust the margin value as needed */
+  }
+  
+  /* Style the Send OTP button */
+  .otp-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Adjust the margin for Send OTP button */
+  .otp-button-container .otp-button {
+    margin-top: 10px; /* Adjust the margin value as needed */
+  }
+  
