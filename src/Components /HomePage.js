@@ -38,8 +38,8 @@ const navigate=useNavigate();
   };
 
   const allCoordinates=async(token)=>{
+    console.log(token);
     try{
-      
       const positions=await axios.get("/api/users/getdetails",{
         headers:{
            Authorization:"Bearer "+token

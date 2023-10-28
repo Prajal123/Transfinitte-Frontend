@@ -22,7 +22,7 @@ const MapComponent = ({latitude,longitude,data}) => {
     // <div className="map">
       <MapContainer
         center={[latitude, longitude]}
-        zoom={70}
+        zoom={800}
         scrollWheelZoom={false}
         style={{ width: '80%', height: '800px' }}
       >
@@ -30,11 +30,11 @@ const MapComponent = ({latitude,longitude,data}) => {
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-        <Marker position={[latitude, longitude]} icon={userMarkerIcon}>
+        <Marker position={[latitude, longitude]} icon={markerIcon}>
         </Marker>
         {data?.map((coord)=>{
-           if(coord.latitude && coord.longitude)
-          return <Marker position={[coord.latitude,coord.longitude]} icon={markerIcon} />
+           if(coord.latitude && coord.longitude && coord.latitude !== latitude && coord.longitude !== longitude)
+          return <Marker position={[coord.latitude,coord.longitude]} icon={userMarkerIcon} />
         })}
       </MapContainer>
     // </div>

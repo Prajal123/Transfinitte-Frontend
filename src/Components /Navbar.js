@@ -21,11 +21,17 @@ const Navbar = () => {
   useEffect(() => {
     const intervalId = setInterval(async() => {
       const email=localStorage.getItem('email');
-      const resp=await axios.get("/api/users/detectCollision",{
-        email:email
+      const token=localStorage.getItem('token');
+   
+      const resp=await axios.post("/api/users/detectCollision",{
+        toEmail:email
+      },{
+        headers:{
+          Authorization:"Bearer "+token
+        }
       })
       console.log(resp);
-      const newNotification = 'The vehicle is approaching.';
+      const newNotification = resp.data.message;
       setNotifications([newNotification, ...notifications]);
       setNotificationCount(notificationCount + 1);
 

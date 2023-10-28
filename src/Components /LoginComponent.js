@@ -35,12 +35,13 @@ const LoginComponent = () => {
       openSnackbar('Please enter a valid mobile number.', 'error');
       return;
     }
+   
     if (!/^\S+@\S+\.\S+$/.test(email)) {
       openSnackbar('Please enter a valid email address.', 'error');
       return;
     }
     try {
-      await axios.post('/api/users/login', { mobileNumber: phoneNumber });
+      await axios.post('/api/users/login', { mobileNumber: phoneNumber});
       setShowOTPField(true);
       openSnackbar('OTP sent successfully', 'success');
     } catch (error) {
@@ -60,6 +61,7 @@ const LoginComponent = () => {
       const response = await axios.post('/api/users/verifyPhOTP', {
         mobileNumber: phoneNumber,
         otp: otp,
+        email:email
       });
 
       if (response.status === 200 || response.status === 201) {
