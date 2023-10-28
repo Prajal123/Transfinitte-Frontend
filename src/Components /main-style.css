@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 100vh;
+  }
+  
+  /* Style the left container */
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    width: 50%;
+  }
+  
+  /* Style the right container */
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  
+  /* Style the main login container */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    height: 250px;
+    width: 45%;
+    margin: 20px; /* Add margin for spacing between elements */
+  }
+  
+  /* Style the OTP field and Submit button container */
+  .otp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Adjust the margin between OTP field and Submit button */
+  .otp-container .submit-button {
+    margin-top: 10px; /* Adjust the margin value as needed */
+  }
+  
+  /* Style the Send OTP button */
+  .otp-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Adjust the margin for Send OTP button */
+  .otp-button-container .otp-button {
+    margin-top: 10px; /* Adjust the margin value as needed */
+  }
+  
+  .navigation-items {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Updated to space-between */
+    align-items: center;
+    flex-direction: row;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    width: 95%;
+    padding: 0 20px; /* Added padding to create space between sections */
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .left-section h3 {
+    margin: 0; /* Remove margin for the h3 element */
+  }
+  
+  .items {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .search-section {
+    display: flex;
+  }
+  
+  .search-section input {
+    margin: 0 10px; /* Add some margin between search bars */
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .Home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+  }
+  .left-Home {
+    /* Your existing styles */
+    overflow-y: auto; /* Add this line to enable y-direction overflow */
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
