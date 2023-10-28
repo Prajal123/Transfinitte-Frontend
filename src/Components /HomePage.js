@@ -91,6 +91,7 @@ const navigate=useNavigate();
        navigate('/');
     }
     const mobileNumber=localStorage.getItem('mobileNumber');
+    if(latitude && longitude)
     updateCoord(mobileNumber);
   },[latitude,longitude]);
 

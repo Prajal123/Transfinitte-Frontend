@@ -63,6 +63,7 @@ const LoginComponent = () => {
         // Redirect the user to the "/home" route upon successful login
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('mobileNumber', response.data.mobileNumber);
+        localStorage.setItem('email',response.data.email);
         navigate('/home');
 
         // Display a success message

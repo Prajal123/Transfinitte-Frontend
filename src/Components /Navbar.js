@@ -19,7 +19,12 @@ const Navbar = () => {
 
   // Simulate notifications every 30 seconds
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const intervalId = setInterval(async() => {
+      const email=localStorage.getItem('email');
+      const resp=await axios.get("/api/users/detectCollision",{
+        email:email
+      })
+      console.log(resp);
       const newNotification = 'The vehicle is approaching.';
       setNotifications([newNotification, ...notifications]);
       setNotificationCount(notificationCount + 1);
@@ -29,7 +34,7 @@ const Navbar = () => {
       setTimeout(() => {
         setCurrentNotification(null);
       }, 4000);
-    }, 30000);
+    }, 10000);
 
     return () => clearInterval(intervalId);
   }, [notifications, notificationCount]);
