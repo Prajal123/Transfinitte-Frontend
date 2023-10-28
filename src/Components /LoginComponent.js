@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Button, TextField, Typography, Snackbar, SnackbarContent, IconButton } from '@mui/material';
+import {
+  Button,
+  TextField,
+  Typography,
+  Snackbar,
+  SnackbarContent,
+  IconButton,
+} from '@mui/material';
 import { Close as CloseIcon } from '@mui/icons-material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -44,20 +51,20 @@ const LoginComponent = () => {
       openSnackbar('Please enter the OTP.', 'error');
       return;
     }
-  
+
     try {
       // Send a POST request to verify the OTP
       const response = await axios.post('/api/users/verifyPhOTP', {
         mobileNumber: phoneNumber,
         otp: otp,
       });
-      
-      if (response.status === 200 || response.status==201) {
+
+      if (response.status === 200 || response.status === 201) {
         // Redirect the user to the "/home" route upon successful login
-        localStorage.setItem('token',response.data.token);
-        localStorage.setItem('mobileNumber',response.data.mobileNumber);
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('mobileNumber', response.data.mobileNumber);
         navigate('/home');
-  
+
         // Display a success message
         openSnackbar('Logged in Successfully!', 'success');
       } else {
@@ -69,7 +76,6 @@ const LoginComponent = () => {
       openSnackbar('An error occurred while verifying OTP. Please try again.', 'error');
     }
   };
-  
 
   useEffect(() => {
     // Use this effect to navigate the user to "/home" if needed.
@@ -79,7 +85,14 @@ const LoginComponent = () => {
 
   return (
     <div className="container">
-      <div className="left-container">Welcome to the GPS Finder App</div>
+      <div className="left-container">
+        <img
+          src="https://media.istockphoto.com/id/1191253526/vector/navigation-app-gps-location-concepts-hand-holding-mobile-phone-with-city-map-and-labels.jpg?s=170667a&w=0&k=20&c=zZEaF3rc_ZUH85w17dmEa_4wvXMpxnfx4mn3xK7uEe4="
+          alt="Collision Tracker"
+        />
+        <h2>Collision Tracker using GPS</h2>
+        <h6>An Application to detect collision of vehicles at Airport!!</h6>
+      </div>
       <div className="right-container">
         <div className="login-container">
           <Typography>Please fill the following credentials</Typography>
@@ -90,6 +103,7 @@ const LoginComponent = () => {
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
             required
+            size='large'
           />
           {showOTPField ? (
             <div className="otp-container">
@@ -101,21 +115,13 @@ const LoginComponent = () => {
                 onChange={(e) => setOtp(e.target.value)}
                 required
               />
-              <Button
-                className="submit-button"
-                variant="contained"
-                onClick={handleVerifyOTP}
-              >
+              <Button className="submit-button" variant="contained" onClick={handleVerifyOTP}>
                 Submit
               </Button>
             </div>
           ) : (
             <div className="otp-button-container">
-              <Button
-                className="otp-button"
-                variant="contained"
-                onClick={handleSendOTP}
-              >
+              <Button className="otp-button" variant="contained" onClick={handleSendOTP}>
                 Send OTP
               </Button>
             </div>
