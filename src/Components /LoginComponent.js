@@ -30,7 +30,7 @@ const LoginComponent = () => {
     }
 
     try {
-      await axios.post('http://localhost:3000/api/users/login', { mobileNumber: phoneNumber });
+      await axios.post('/api/users/login', { mobileNumber: phoneNumber });
       setShowOTPField(true);
       openSnackbar('OTP sent successfully', 'success');
     } catch (error) {
@@ -47,13 +47,15 @@ const LoginComponent = () => {
   
     try {
       // Send a POST request to verify the OTP
-      const response = await axios.post('http://localhost:3000/api/users/verifyPhOTP', {
+      const response = await axios.post('/api/users/verifyPhOTP', {
         mobileNumber: phoneNumber,
         otp: otp,
       });
-  
-      if (response.status === 200) {
+      
+      if (response.status === 200 || response.status==201) {
         // Redirect the user to the "/home" route upon successful login
+        localStorage.setItem('token',response.data.token);
+        localStorage.setItem('mobileNumber',response.data.mobileNumber);
         navigate('/home');
   
         // Display a success message

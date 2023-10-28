@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => {
   return (
     <>
-      <div className="navigation-items">
+      <div className="navigation-items" style={{marginBottom:'40px'}}>
         <div className="navigation">
           <div className="left-section">
             <h3>GPS Finder</h3> {/* Name "GPS Finder" */}
