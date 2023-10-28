@@ -10,6 +10,12 @@ const markerIcon=new L.icon({
   iconAnchor:[17,45]
 })
 
+const userMarkerIcon=new L.icon({
+  iconUrl:require("./user_marker.png"),
+  iconSize:[23,30],
+  iconAnchor:[17,45]
+})
+
 const MapComponent = ({latitude,longitude,data}) => {
   console.log(data);
   return (
@@ -24,7 +30,7 @@ const MapComponent = ({latitude,longitude,data}) => {
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-        <Marker position={[latitude, longitude]} icon={markerIcon}>
+        <Marker position={[latitude, longitude]} icon={userMarkerIcon}>
         </Marker>
         {data?.map((coord)=>{
            if(coord.latitude && coord.longitude)

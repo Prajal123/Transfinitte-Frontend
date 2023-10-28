@@ -17,7 +17,7 @@ const LoginComponent = () => {
   const [showOTPField, setShowOTPField] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [otp, setOtp] = useState('');
-
+  const [email, setEmail] = useState('');
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarType, setSnackbarType] = useState('success');
@@ -35,7 +35,10 @@ const LoginComponent = () => {
       openSnackbar('Please enter a valid mobile number.', 'error');
       return;
     }
-
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      openSnackbar('Please enter a valid email address.', 'error');
+      return;
+    }
     try {
       await axios.post('/api/users/login', { mobileNumber: phoneNumber });
       setShowOTPField(true);
@@ -103,6 +106,15 @@ const LoginComponent = () => {
             type="number"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
+            required
+            size='large'
+          />
+          <TextField
+            label="Email"
+            variant="standard"
+            type="email" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
             size='large'
           />
