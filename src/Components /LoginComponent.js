@@ -90,7 +90,7 @@ const LoginComponent = () => {
           src="https://media.istockphoto.com/id/1191253526/vector/navigation-app-gps-location-concepts-hand-holding-mobile-phone-with-city-map-and-labels.jpg?s=170667a&w=0&k=20&c=zZEaF3rc_ZUH85w17dmEa_4wvXMpxnfx4mn3xK7uEe4="
           alt="Collision Tracker"
         />
-        <h2>Collision Tracker using GPS</h2>
+        <h2>Collision Detector using GPS</h2>
         <h6>An Application to detect collision of vehicles at Airport!!</h6>
       </div>
       <div className="right-container">
