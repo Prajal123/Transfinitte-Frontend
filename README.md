@@ -39,12 +39,10 @@ $ npm run start // this will run the files in docs, this behavior is exactly the
 ## Images of the website
 ![1](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/5035160e-d04c-4e68-adf2-a2ee73da68b2)
 ![2](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/54ca5d33-5ecf-4135-bafa-2b8a292398c5)
-![3](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/59552b10-8f08-4720-88af-710fd2c663fa)
-![4](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/97c8f251-ce6c-4ec7-aa99-302dd491d28f)
-![5](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/78b1d31c-c32f-4187-a
-![6](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/0f3d6302-55cd-4746-856f-d01bd834e330)
-966-ce5311c7818e)
-![7](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/4af01ade-c487-4cc4-b7db-a3cf6fafb270)
+![4](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/d48292ab-e2e6-4584-8808-a7c38c2a77d9)
+![5](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/e223eceb-be44-43a7-9d16-71083bfc7d0)
+![6](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/1c30300e-869a-4b68-ba1f-17bfae)
+![7](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/b9332943-4887-42cc-8854-ea4fc9a7ae01)
 
 ## BUGs or comments
 
