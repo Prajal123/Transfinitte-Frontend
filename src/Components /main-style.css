@@ -74,6 +74,8 @@ html, body {
   .navigation-items {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
+    min-height: 80px;
   }
   
   .navigation {
@@ -134,7 +136,15 @@ html, body {
   .search-section input {
     margin: 0 10px; /* Add some margin between search bars */
   }
-
+  .alert-placeholder{
+    height: 20px;
+    position: absolute;
+    z-index: 1000;
+    left: 40%;
+    top: 10%;
+    width: 550px;
+    text-align: center;
+  }
   .card {
     border: 1px solid #ccc;
     padding: 10px;
@@ -147,7 +157,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
+    margin-top: 80px;
   }
   .left-Home {
     /* Your existing styles */

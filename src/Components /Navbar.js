@@ -2,12 +2,14 @@ import { TextField, Badge, IconButton, Popover, List, ListItem, ListItemText, Al
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [notificationCount, setNotificationCount] = useState(0);
   const [notifications, setNotifications] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentNotification, setCurrentNotification] = useState(null);
-
+  const [severity, setSeverity] = useState('success')
+  const navigate = useNavigate();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
     setNotificationCount(0); // Reset notification count when the dropdown is opened
@@ -15,6 +17,12 @@ const Navbar = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleSignOut = () => {
+    // Clear local storage and redirect to the home page
+    localStorage.clear();
+    navigate('/');
   };
 
   // Simulate notifications every 30 seconds
@@ -30,8 +38,17 @@ const Navbar = () => {
           Authorization:"Bearer "+token
         }
       })
-      console.log(resp);
+      
       const newNotification = resp.data.message;
+      if(newNotification === "You are in red zone, please stop the vehicle"){
+        setSeverity("error");
+      }else if(newNotification === "You are in the orange zone, please go slow"){
+        setSeverity("error");
+      }else if(newNotification === "You are in the yellow zone, move carefully"){
+        setSeverity("warning");
+      }else{
+        setSeverity("success");
+      }
       setNotifications([newNotification, ...notifications]);
       setNotificationCount(notificationCount + 1);
 
@@ -59,9 +76,8 @@ const Navbar = () => {
 
           <div className="items">
             <div className="button-items">
-              <ul className="button-item">Home</ul>
-              <ul className="button-item">Dashboard</ul>
-              <ul className="button-item">Account</ul>
+              
+              <ul className="button-item" onClick={handleSignOut}>Sign Out</ul>
               <IconButton onClick={handleClick}>
                 <Badge badgeContent={notificationCount} color="secondary">
                   <NotificationsIcon />
@@ -92,12 +108,13 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
+      <div className='alert-placeholder'>
       {currentNotification && (
-        <Alert severity="info">
+        <Alert variant='filled' severity={severity} style={{display:'flex', justifyContent: 'center', alignItems:'center'}}>
           {currentNotification}
         </Alert>
       )}
+      </div>
     </>
   );
 };
