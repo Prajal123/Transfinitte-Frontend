@@ -42,15 +42,13 @@ $ npm run start // this will run the files in docs, this behavior is exactly the
 User visit public and Home page
 ![User visit public and Home page](https://drive.google.com/file/d/1vQqTkeJ0PFWw1ZmIqYYlP4lGC9zaLAXH/view?usp=drive_link)
 
-User can sign in or sign up
-![User can sign in or sign up](http://i.imgur.com/rrmbU5I.png)
+User can sign in using email or mobile number
+![User can sign in using email or mobile number](http://i.imgur.com/rrmbU5I.png)
 
 After signing in user can go to account route and make request to token-protected API endpoint
 ![After signing in user can go to account route](http://i.imgur.com/FzLB51u.png)
 
-## Standard
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ## BUGs or comments
 
