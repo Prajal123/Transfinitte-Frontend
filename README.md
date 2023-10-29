@@ -36,6 +36,10 @@ $ npm run build // this will compile the react code using webpack and generate a
 $ npm run start // this will run the files in docs, this behavior is exactly the same how gh-pages will run your static site
 ```
 
+
+## Video of the website
+https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/692bb9c9-73d4-41bf-badc-4ed61ba68114
+
 ## Images of the website
 ![1](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/a0664009-9f57-441b-8408-d048ecc3d647)
 ![2](https://github.com/Prajal123/Transfinitte-Frontend/assets/83663141/c9fbc6fb-0320-401b-b65b-72be474da374)
