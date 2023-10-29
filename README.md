@@ -36,20 +36,6 @@ $ npm run build // this will compile the react code using webpack and generate a
 $ npm run start // this will run the files in docs, this behavior is exactly the same how gh-pages will run your static site
 ```
 
-
-# Screenshots of this project
-
-User visit public and Home page
-![User visit public and Home page](https://drive.google.com/file/d/1vQqTkeJ0PFWw1ZmIqYYlP4lGC9zaLAXH/view?usp=drive_link)
-
-User can sign in using email or mobile number
-![User can sign in using email or mobile number](http://i.imgur.com/rrmbU5I.png)
-
-After signing in user can go to account route and make request to token-protected API endpoint
-![After signing in user can go to account route](http://i.imgur.com/FzLB51u.png)
-
-
-
 ## BUGs or comments
 
 [Create new Issues](https://github.com/Prajal123/Transfinitte-Frontend/issues) (preferred)
